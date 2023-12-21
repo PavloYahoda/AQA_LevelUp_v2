@@ -9,19 +9,21 @@ import org.openqa.selenium.support.PageFactory;
 import java.time.Duration;
 
 
-public class HomePage{
+public class HomePage {
     private WebDriver driver;
+
     public HomePage(WebDriver driver) {
         this.driver = driver;
 //        PageFactory.initElements(driver, this);
     }
 
-    private By element = By.cssSelector("div[class='card mt-4 top-card']");
+    private By elements = By.cssSelector("div[class='card mt-4 top-card']");
+    private By forms = By.xpath("//div[@class='card mt-4 top-card'][2]");
 //    @FindBy(css = "div[class='card mt-4 top-card']")
 //    WebElement elementsTab;
 
     public ElementsPage clickOnElements() {
-        driver.findElement(element).click();
+        driver.findElement(elements).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         return new ElementsPage(driver);
     }
@@ -30,4 +32,10 @@ public class HomePage{
 //        elementsTab.click();
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 //    }
+
+    public FormsPage clickOnForms() {
+        driver.findElement(forms).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        return new FormsPage(driver);
+    }
 }

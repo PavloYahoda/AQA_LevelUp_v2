@@ -46,7 +46,7 @@ public class BaseTest {
         return new HomePage(driver);
     }
 
-//    public void  getURL(String Url){
-//        driver.get(URL);
-//    }
+    public FormsPage getFormsPage(){
+        return new FormsPage(driver);
+    }
 }

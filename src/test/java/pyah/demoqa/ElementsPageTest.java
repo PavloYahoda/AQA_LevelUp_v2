@@ -1,7 +1,6 @@
 package pyah.demoqa;
 
 import org.junit.jupiter.api.*;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static pyah.demoqa.ElementsPage.*;
@@ -10,7 +9,6 @@ import static pyah.demoqa.ElementsPage.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class ElementsPageTest extends BaseTest {
-
 
     //Find and fill TextBox form
     @Test
